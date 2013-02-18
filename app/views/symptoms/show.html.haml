@@ -1,0 +1,10 @@
+%p#notice= notice
+%p
+  %b Animal:
+  = @symptom.animal_id
+%p
+  %b Problem:
+  = @symptom.problem_id
+= link_to 'Edit', edit_symptom_path(@symptom)
+|
+\#{link_to 'Back', symptoms_path}

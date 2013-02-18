@@ -1,0 +1,7 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @problem.name
+= link_to 'Edit', edit_problem_path(@problem)
+|
+\#{link_to 'Back', problems_path}

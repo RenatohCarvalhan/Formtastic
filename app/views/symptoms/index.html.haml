@@ -1,0 +1,17 @@
+%h1 Listing symptoms
+%table
+  %tr
+    %th Animal
+    %th Problem
+    %th
+    %th
+    %th
+  - @symptoms.each do |symptom|
+    %tr
+      %td= symptom.animal.name
+      %td= symptom.problem.name
+      %td= link_to 'Show', symptom
+      %td= link_to 'Edit', edit_symptom_path(symptom)
+      %td= link_to 'Destroy', symptom, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Symptom', new_symptom_path
