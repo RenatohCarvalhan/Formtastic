@@ -1,0 +1,7 @@
+= semantic_form_for @animal do |f|
+  = f.inputs do
+    = f.input :name
+    = f.input :born_on, :start_year => 1980
+    = f.input :category, :include_blank => false
+    = f.input :female, :as => :radio, :label => "Gender", :collection => [["Male", false], ["Female", true]]
+  = f.button
